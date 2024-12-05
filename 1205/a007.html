@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000;"></canvas>
+        <script>
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = "#87CEEB"; // 填充顏色（天空藍）
+            ctx.strokeStyle = "#000000"; // 邊框顏色
+            ctx.lineWidth = 2; // 邊框寬度
+
+            // 開始繪製平行四邊形
+            ctx.beginPath();
+            ctx.moveTo(50, 50); // 起點
+            ctx.lineTo(150, 50); // 上邊的另一點
+            ctx.lineTo(200, 100); // 右上角
+            ctx.lineTo(100, 100); // 左下角
+            ctx.closePath(); // 封閉路徑，使其成為封閉形狀
+
+            // 填充平行四邊形
+            ctx.fill();
+
+            // 畫出邊框
+            // ctx.stroke();
+        </script> 
+    </body>
+</html>
